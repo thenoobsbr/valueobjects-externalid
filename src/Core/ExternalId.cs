@@ -28,7 +28,7 @@ public static class ExternalId
         }
         
         if (!prefix.EndsWith("_")
-            || !prefix.EndsWith("-"))
+            && !prefix.EndsWith("-"))
         {
             prefix += "_";
         }
