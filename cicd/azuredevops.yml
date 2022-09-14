@@ -26,6 +26,11 @@ stages:
               extraProperties: |
                 sonar.exclusions=**/*test*
                 sonar.exclusions=**/lib/**
+                
+          - task: UseDotNet@2
+            inputs:
+              packageType: 'sdk'
+              version: '6.0'
 
           - task: DotNetCoreCLI@2
             displayName: Restore
