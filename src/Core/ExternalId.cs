@@ -10,14 +10,8 @@ public static class ExternalId
     private const int NUMBERS = 4;
     private const int MAX_NUMBER_VALUE = 100;
     private const int MIN_LENGTH = 20;
-    private static readonly Random _random;
-    private static readonly string _alphabet;
-
-    static ExternalId()
-    {
-        _random = new Random();
-        _alphabet = string.Concat(LOWER_CASE_CHARACTERS, UPPER_CASE_CHARACTERS, DIGITS);
-    }
+    private static readonly Random _random = new();
+    private static readonly string _alphabet = string.Concat(LOWER_CASE_CHARACTERS, UPPER_CASE_CHARACTERS, DIGITS);
 
     public static string Create(int maxLength) => Create(maxLength, string.Empty);
     
