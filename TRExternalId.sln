@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C3CB82DA-518C-4A1B-AB8F-EB1B27C55CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRExternalId.Core", "src\Core\TRExternalId.Core.csproj", "{EB6C29CD-920D-4804-91F0-5DE01F8DBB6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{26A5ECC2-23B8-4B33-8258-10A55ECBDB89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRExternalId.Code.Tests", "tests\Code\TRExternalId.Code.Tests.csproj", "{1F0C9A5E-D499-4713-92D7-9EF59A1F008A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB6C29CD-920D-4804-91F0-5DE01F8DBB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB6C29CD-920D-4804-91F0-5DE01F8DBB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB6C29CD-920D-4804-91F0-5DE01F8DBB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB6C29CD-920D-4804-91F0-5DE01F8DBB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F0C9A5E-D499-4713-92D7-9EF59A1F008A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F0C9A5E-D499-4713-92D7-9EF59A1F008A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F0C9A5E-D499-4713-92D7-9EF59A1F008A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F0C9A5E-D499-4713-92D7-9EF59A1F008A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB6C29CD-920D-4804-91F0-5DE01F8DBB6B} = {C3CB82DA-518C-4A1B-AB8F-EB1B27C55CE4}
+		{1F0C9A5E-D499-4713-92D7-9EF59A1F008A} = {26A5ECC2-23B8-4B33-8258-10A55ECBDB89}
+	EndGlobalSection
+EndGlobal
