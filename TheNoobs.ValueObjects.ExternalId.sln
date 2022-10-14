@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FFBC94FE-9F19-4D63-87FF-F76AFEE4D336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheNoobs.ValueObjects.ExternalId", "src\TheNoobs.ValueObjects.ExternalId\TheNoobs.ValueObjects.ExternalId.csproj", "{DCDB0677-9A16-4C87-83EE-DE89CDEF3474}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2F917386-6F71-4CF3-83BA-D17DC728005D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheNoobs.ValueObjects.ExternalId.UnitTests", "tests\TheNoobs.ValueObjects.ExternalId.UnitTests\TheNoobs.ValueObjects.ExternalId.UnitTests.csproj", "{98FFC4F2-0B7B-472A-89F2-685EB112DF63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCDB0677-9A16-4C87-83EE-DE89CDEF3474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDB0677-9A16-4C87-83EE-DE89CDEF3474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDB0677-9A16-4C87-83EE-DE89CDEF3474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDB0677-9A16-4C87-83EE-DE89CDEF3474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FFC4F2-0B7B-472A-89F2-685EB112DF63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FFC4F2-0B7B-472A-89F2-685EB112DF63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FFC4F2-0B7B-472A-89F2-685EB112DF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FFC4F2-0B7B-472A-89F2-685EB112DF63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DCDB0677-9A16-4C87-83EE-DE89CDEF3474} = {FFBC94FE-9F19-4D63-87FF-F76AFEE4D336}
+		{98FFC4F2-0B7B-472A-89F2-685EB112DF63} = {2F917386-6F71-4CF3-83BA-D17DC728005D}
+	EndGlobalSection
+EndGlobal

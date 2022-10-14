@@ -1,0 +1,4 @@
+variables:
+  - group: valueobjects-externalid
+  - group: sonar
+  - group: nuget

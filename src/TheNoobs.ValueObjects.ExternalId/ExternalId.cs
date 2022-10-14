@@ -1,8 +1,10 @@
-﻿using HashidsNet;
+﻿using System.Text.RegularExpressions;
+using HashidsNet;
+using TheNoobs.ValueObjects.Abstractions;
 
-namespace TRExternalId.Core;
+namespace TheNoobs.ValueObjects.ExternalId;
 
-public static class ExternalId
+public abstract class ExternalId : ValueObject<string> 
 {
     private const string LOWER_CASE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
     private const string UPPER_CASE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -10,12 +12,20 @@ public static class ExternalId
     private const int NUMBERS = 4;
     private const int MAX_NUMBER_VALUE = 100;
     private const int MIN_LENGTH = 20;
+    private const char SEPARATOR = '_';
     private static readonly Random _random = new();
     private static readonly string _alphabet = string.Concat(LOWER_CASE_CHARACTERS, UPPER_CASE_CHARACTERS, DIGITS);
-
-    public static string Create(int maxLength) => Create(maxLength, string.Empty);
     
-    public static string Create(int maxLength, string prefix)
+
+    protected ExternalId(string value) : base(value)
+    {
+    }
+    
+    protected ExternalId(int maxLength, string prefix) : base(Create(maxLength, prefix))
+    {
+    }
+
+    private static string Create(int maxLength, string prefix)
     {
         if (maxLength < MIN_LENGTH)
         {
@@ -26,20 +36,19 @@ public static class ExternalId
         {
             throw new ArgumentNullException(nameof(prefix), "The prefix is required");
         }
-        
-        if (!prefix.EndsWith("_")
-            && !prefix.EndsWith("-"))
+
+        if (!Regex.IsMatch(prefix, @"^[a-zA-Z]{3,4}$", RegexOptions.Compiled))
         {
-            prefix += "_";
+            throw new ArgumentException("The prefix is invalid", nameof(prefix));
         }
         
         var salt = Guid.NewGuid().ToString();
-        var hashids = new Hashids(salt, maxLength - prefix.Length, _alphabet);
+        var hashids = new Hashids(salt, maxLength - prefix.Length - 1, _alphabet);
         var numbers = Enumerable
             .Range(0, NUMBERS)
             .Select(r => _random.Next(MAX_NUMBER_VALUE))
             .ToList();
         var hash = hashids.Encode(numbers);
-        return string.Concat(prefix, hash);
+        return string.Concat(prefix, SEPARATOR, hash);
     }
 }
