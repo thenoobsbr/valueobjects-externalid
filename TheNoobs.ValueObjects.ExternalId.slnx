@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="nuget.config" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/TheNoobs.ValueObjects.ExternalId/TheNoobs.ValueObjects.ExternalId.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TheNoobs.ValueObjects.ExternalId.UnitTests/TheNoobs.ValueObjects.ExternalId.UnitTests.csproj" />
+  </Folder>
+</Solution>
