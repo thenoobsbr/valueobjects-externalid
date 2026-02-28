@@ -34,14 +34,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hashids.net" Version="1.7.0" />
-    <PackageReference Include="TheNoobs.ValueObjects.Abstractions" Version="1.0.1" />
+    <PackageReference Include="Hashids.net" Version="1.7.0"/>
+    <PackageReference Include="TheNoobs.ValueObjects.Abstractions" Version="1.0.1"/>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\images\icon.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\images\icon.png" Pack="true" PackagePath="\"/>
     <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
     <None Include="..\..\LICENSE" Pack="true" PackagePath="\"/>
-  </ItemGroup>  
+  </ItemGroup>
 
 </Project>

@@ -1,26 +1,28 @@
 ﻿using System.Text.RegularExpressions;
+
 using HashidsNet;
+
 using TheNoobs.ValueObjects.Abstractions;
 
 namespace TheNoobs.ValueObjects.ExternalId;
 
-public abstract class ExternalId : ValueObject<string> 
+public abstract class ExternalId : ValueObject<string>
 {
-    private const string LOWER_CASE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
-    private const string UPPER_CASE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private const string DIGITS = "0123456789";
-    private const int NUMBERS = 4;
+    private const string LOWER_CASE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
     private const int MAX_NUMBER_VALUE = 100;
     private const int MIN_LENGTH = 20;
+    private const int NUMBERS = 4;
     private const char SEPARATOR = '_';
+    private const string UPPER_CASE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static readonly Random _random = new();
     private static readonly string _alphabet = string.Concat(LOWER_CASE_CHARACTERS, UPPER_CASE_CHARACTERS, DIGITS);
-    
+
 
     protected ExternalId(string value) : base(value)
     {
     }
-    
+
     protected ExternalId(int maxLength, string prefix) : base(Create(maxLength, prefix))
     {
     }
@@ -41,7 +43,7 @@ public abstract class ExternalId : ValueObject<string>
         {
             throw new ArgumentException("The prefix is invalid", nameof(prefix));
         }
-        
+
         var salt = Guid.NewGuid().ToString();
         var hashids = new Hashids(salt, maxLength - prefix.Length - 1, _alphabet);
         var numbers = Enumerable
