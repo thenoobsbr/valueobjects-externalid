@@ -1,16 +1,30 @@
 <Solution>
+    <Folder Name="/.github/">
+        <File Path=".github/CONTRIBUTING.md" />
+        <File Path=".github/PULL_REQUEST_TEMPLATE.md" />
+    </Folder>
+    <Folder Name="/.github/ISSUE_TEMPLATE/">
+        <File Path=".github/ISSUE_TEMPLATE/bug_report.md" />
+        <File Path=".github/ISSUE_TEMPLATE/feature_request.md" />
+        <File Path=".github/ISSUE_TEMPLATE/support_request.md" />
+    </Folder>
+    <Folder Name="/.github/workflows/">
+        <File Path=".github/workflows/codeql.yml" />
+        <File Path=".github/workflows/nuget-publish.yml" />
+    </Folder>
     <Folder Name="/Solution Items/">
-        <File Path=".editorconfig"/>
-        <File Path=".gitignore"/>
-        <File Path="LICENSE"/>
-        <File Path="nuget.config"/>
-        <File Path="README.md"/>
+        <File Path=".editorconfig" />
+        <File Path=".gitignore" />
+        <File Path="CODE_OF_CONDUCT.md" />
+        <File Path="CONTRIBUTING.md" />
+        <File Path="LICENSE" />
+        <File Path="nuget.config" />
+        <File Path="README.md" />
     </Folder>
     <Folder Name="/src/">
-        <Project Path="src/TheNoobs.ValueObjects.ExternalId/TheNoobs.ValueObjects.ExternalId.csproj"/>
+        <Project Path="src/TheNoobs.ValueObjects.ExternalId/TheNoobs.ValueObjects.ExternalId.csproj" />
     </Folder>
     <Folder Name="/tests/">
-        <Project
-                Path="tests/TheNoobs.ValueObjects.ExternalId.UnitTests/TheNoobs.ValueObjects.ExternalId.UnitTests.csproj"/>
+        <Project Path="tests/TheNoobs.ValueObjects.ExternalId.UnitTests/TheNoobs.ValueObjects.ExternalId.UnitTests.csproj" />
     </Folder>
 </Solution>
