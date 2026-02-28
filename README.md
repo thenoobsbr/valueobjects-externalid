@@ -3,9 +3,9 @@
 A lightweight and opinionated .NET library that implements **Value Objects** for external identifiers, using **Hashids.net** as the generation engine.
 
 [![NuGet](https://img.shields.io/nuget/v/TheNoobs.ValueObjects.ExternalId.svg)](https://www.nuget.org/packages/TheNoobs.ValueObjects.ExternalId/)
-[![License](https://img.shields.io/github/license/thenoobsbr/TheNoobs.ValueObjects.ExternalId)](LICENSE)
+[![License](https://img.shields.io/github/license/thenoobsbr/valueobjects-externalid)](LICENSE)
 ![.NET Standard](https://img.shields.io/badge/.NET-Standard%202.0-blue)
-[![CodeQL - C#](https://github.com/thenoobsbr/TheNoobs.ValueObjects.ExternalId/actions/workflows/codeql.yml/badge.svg)](https://github.com/thenoobsbr/TheNoobs.ValueObjects.ExternalId/actions/workflows/codeql.yml)
+[![CodeQL - C#](https://github.com/thenoobsbr/valueobjects-externalid/actions/workflows/codeql.yml/badge.svg)](https://github.com/thenoobsbr/valueobjects-externalid/actions/workflows/codeql.yml)
 
 ## Why use ExternalId as a Value Object?
 
